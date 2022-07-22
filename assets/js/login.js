@@ -33,6 +33,7 @@ $(function(){
             $('#link_login').click()
         })
     })
+    // 登录
     $('#form_login').on('submit',function(e){
         e.preventDefault()
         $.ajax({
@@ -44,8 +45,12 @@ $(function(){
                     return layui.layer.msg(res.message)
                 }
                 layui.layer.msg('登录成功')
+                console.log('dengluchengg');
                 console.log(res.token);
-                // location.href='/index.html'
+                localStorage.setItem('token',res.token)
+
+                location.href='./index.html'
+                
                 
             }
             
