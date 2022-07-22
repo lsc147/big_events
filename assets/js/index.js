@@ -1,7 +1,5 @@
 $(function(){
     getUserInfo()
-
-
     // 退出页面
     $('#btnLogout').on('click',function(){
         layui.layer.confirm('确认退出程序',{icon:3,title:'提示'},function(){
@@ -24,7 +22,7 @@ function getUserInfo(){
                 return layui.layer.msg('获取用户信息失败')
             }
             renderAvatar(res.data)
-        },
+        }
         // complete:function(res){
         //     if(res.responseJSON.status===1&&res.responseJSON.msg==='身份认证失败'){
         //         localStorage.removeItem('token')
